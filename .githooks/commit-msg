@@ -1,0 +1,10 @@
+#!/bin/sh
+set -eu
+root=$(git rev-parse --show-toplevel)
+message_file=$1
+case "$message_file" in
+  /*) ;;
+  *) message_file="$(pwd)/$message_file" ;;
+esac
+cd "$root"
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$root/src" python3 -m sillage_dev.hooks commit-msg "$message_file"

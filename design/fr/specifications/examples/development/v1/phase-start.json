@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "sillage-development-phase-start",
+  "project": "sillage",
+  "phase": "P02",
+  "git": {
+    "github_repository": "example/sillage",
+    "base_branch": "develop",
+    "expected_head": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "work_branch": "feature/p02-package-install",
+    "require_clean_worktree": true,
+    "require_personal_commit_signature": true
+  },
+  "issues": {
+    "parent": {
+      "title": "Phase 2 - Controlled package installation",
+      "body": "Objective: deliver a usable package installation flow. Scope: package creation, isolated preflight, local installation, and diagnostics. Out of scope: automated correction and publication. Acceptance: AC01 and AC02 are satisfied.",
+      "labels": [
+        "type:feature",
+        "phase:2"
+      ]
+    },
+    "steps": [
+      {
+        "step_id": "E01",
+        "title": "Prepare an incremental ZIP bundle",
+        "body": "Deliver a ZIP with a v1 manifest and the exact pinned base. Acceptance: its declared files and hashes are available for independent local validation.",
+        "labels": [
+          "type:feature",
+          "phase:2"
+        ]
+      },
+      {
+        "step_id": "E02",
+        "title": "Validate and install the bundle locally",
+        "body": "Validate an isolated candidate and request local approval before installation. Acceptance: accept the authorized bundle and reject an invalid bundle without unrelated changes.",
+        "labels": [
+          "type:feature",
+          "phase:2"
+        ]
+      }
+    ]
+  },
+  "documents": {
+    "smart_english_source": "SMART.en.md",
+    "smart_english_sha256": "sha256:0c58e837c32821625688f31ed50f069b82230528c97f84d153a70ccb39671d36",
+    "smart_target": "docs/phase-02/SMART.md"
+  },
+  "checks": {
+    "profile": "phase-start"
+  }
+}

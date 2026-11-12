@@ -1,0 +1,12 @@
+{
+  "type:feature": "Feature development",
+  "type:fix": "Bug fix",
+  "type:refactor": "Focused refactoring",
+  "type:docs": "Documentation change",
+  "type:chore": "Repository maintenance",
+  "phase:0": "Bootstrap phase",
+  "phase:1": "Private context phase",
+  "phase:2": "Controlled delivery phase",
+  "phase:3": "Diagnosis and correction phase",
+  "phase:4": "Optional publication phase"
+}

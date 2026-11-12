@@ -1,0 +1,5 @@
+#!/bin/sh
+set -eu
+root=$(git rev-parse --show-toplevel)
+cd "$root"
+PYTHONDONTWRITEBYTECODE=1 PYTHONPATH="$root/src" python3 -m sillage_dev.hooks pre-push
